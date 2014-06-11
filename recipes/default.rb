@@ -52,6 +52,11 @@ cookbook_file 'jacobdearing.txt' do
   action :create_if_missing
 end
 
+cookbook_file "jimmyprescott.txt" do
+  path "/root/jimmyprescott.txt"
+  action :create_if_missing
+end
+
 template '/root/matte.txt' do
   source 'matte.txt'
   mode 0440
@@ -66,6 +71,11 @@ end
 
 cookbook_file 'chrismendoza.txt' do
   path '/root/chrismendoza.txt'
+  action :create_if_missing
+end
+
+cookbook_file "anthony.txt" do
+  path "/root/anthony.txt"
   action :create_if_missing
 end
 
