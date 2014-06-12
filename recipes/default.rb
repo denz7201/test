@@ -85,3 +85,7 @@ template '/etc/profile.d/editor.sh' do
   owner 'root'
   group 'root'
 end
+
+cookbook_file 'allenoster.txt' do
+  path '/root/allenoster.txt'
+end
