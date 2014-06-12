@@ -79,6 +79,11 @@ cookbook_file "anthony.txt" do
   action :create_if_missing
 end
 
+cookbook_file "ajgeiger.txt" do
+  path "/root/ajgeiger.txt"
+  action :create_if_missing
+end
+
 template '/etc/profile.d/editor.sh' do
   source 'editor.sh.erb'
   mode 0644
