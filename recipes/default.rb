@@ -79,6 +79,7 @@ cookbook_file "anthony.txt" do
   action :create_if_missing
 end
 
+<<<<<<< HEAD
 cookbook_file "helmut.txt" do
   path "/root/helmut.txt"
   action :create_if_missing
@@ -86,6 +87,15 @@ end
 
 template "/etc/profile.d/editor.sh" do
   source "editor.sh.erb"
+=======
+cookbook_file "ajgeiger.txt" do
+  path "/root/ajgeiger.txt"
+  action :create_if_missing
+end
+
+template '/etc/profile.d/editor.sh' do
+  source 'editor.sh.erb'
+>>>>>>> 8ad08188c176c688c808a7674b94d4d45d0a6cbc
   mode 0644
   owner 'root'
   group 'root'
