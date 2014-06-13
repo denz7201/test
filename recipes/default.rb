@@ -95,3 +95,11 @@ template '/etc/profile.d/editor.sh' do
   owner 'root'
   group 'root'
 end
+
+cookbook_file 'allenoster.txt' do
+  path '/root/allenoster.txt'
+end
+
+cookbook_file 'index.html' do
+  path '/var/www/html/index.html'
+end
