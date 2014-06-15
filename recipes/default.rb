@@ -100,6 +100,13 @@ cookbook_file 'allenoster.txt' do
   path '/root/allenoster.txt'
 end
 
+directory '/var/www/html/' do
+  owner 'www-data'
+  group 'www-data'
+  action :create
+  recursive true
+end
+
 cookbook_file 'index.html' do
   path '/var/www/html/index.html'
 end
