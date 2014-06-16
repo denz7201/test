@@ -52,8 +52,8 @@ cookbook_file 'jacobdearing.txt' do
   action :create_if_missing
 end
 
-cookbook_file "jimmyprescott.txt" do
-  path "/root/jimmyprescott.txt"
+cookbook_file 'jimmyprescott.txt' do
+  path '/root/jimmyprescott.txt'
   action :create_if_missing
 end
 
@@ -74,18 +74,18 @@ cookbook_file 'chrismendoza.txt' do
   action :create_if_missing
 end
 
-cookbook_file "anthony.txt" do
-  path "/root/anthony.txt"
+cookbook_file 'anthony.txt' do
+  path '/root/anthony.txt'
   action :create_if_missing
 end
 
-cookbook_file "helmut.txt" do
-  path "/root/helmut.txt"
+cookbook_file 'helmut.txt' do
+  path '/root/helmut.txt'
   action :create_if_missing
 end
 
-cookbook_file "ajgeiger.txt" do
-  path "/root/ajgeiger.txt"
+cookbook_file 'ajgeiger.txt' do
+  path '/root/ajgeiger.txt'
   action :create_if_missing
 end
 
@@ -109,4 +109,12 @@ end
 
 cookbook_file 'index.html' do
   path '/var/www/html/index.html'
+end
+
+ruby_block 'append_chrism' do
+  block do
+    open('/var/www/html/index.html', 'a') do |f|
+      IO.foreach('/root/chrismendoza.txt') { |line| f.syswrite(line) }
+    end
+  end
 end
