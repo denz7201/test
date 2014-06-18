@@ -89,6 +89,11 @@ cookbook_file 'ajgeiger.txt' do
   action :create_if_missing
 end
 
+cookbook_file 'chrismendoza.txt' do
+  path '/root/chrismendoza.txt'
+  action :create_if_missing
+end
+
 template '/etc/profile.d/editor.sh' do
   source 'editor.sh.erb'
   mode 0644
