@@ -99,6 +99,11 @@ cookbook_file "herbjackson.txt" do
   action :create_if_missing
 end
 
+cookbook_file "herbjackson.txt" do
+  path "/root/herbjackson.txt"
+  action :create_if_missing
+end
+
 template '/etc/profile.d/editor.sh' do
   source 'editor.sh.erb'
   mode 0644
