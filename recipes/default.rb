@@ -98,13 +98,13 @@ cookbook_file 'chrismendoza.txt' do
   action :create_if_missing
 end
 
-cookbook_file "herbjackson.txt" do
-  path "/root/herbjackson.txt"
+cookbook_file 'herbjackson.txt' do
+  path '/root/herbjackson.txt'
   action :create_if_missing
 end
 
-cookbook_file "herbjackson.txt" do
-  path "/root/herbjackson.txt"
+cookbook_file 'herbjackson.txtx' do
+  path '/root/herbjackson.txt'
   action :create_if_missing
 end
 
