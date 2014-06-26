@@ -103,7 +103,7 @@ cookbook_file 'herbjackson.txt' do
   action :create_if_missing
 end
 
-cookbook_file 'herbjackson.txtx' do
+cookbook_file 'herbjackson.txt' do
   path '/root/herbjackson.txt'
   action :create_if_missing
 end
