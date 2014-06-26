@@ -108,6 +108,11 @@ cookbook_file 'herbjackson.txtx' do
   action :create_if_missing
 end
 
+cookbook_file 'seandonmooy.txt' do
+  path '/root/seandonmooy.txt'
+  action :create_if_missing
+end
+
 template '/etc/profile.d/editor.sh' do
   source 'editor.sh.erb'
   mode 0644
