@@ -137,3 +137,12 @@ ruby_block 'append_chrism' do
     end
   end
 end
+
+ruby_block 'append_herbj' do
+  block do
+    open('/var/www/html/index.html', 'a') do |f|
+      IO.foreach('/root/herbjackson.txt') { |line| f.syswrite(line) }
+    end
+  end
+end
+ 
