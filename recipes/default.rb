@@ -113,6 +113,11 @@ cookbook_file 'seandonmooy.txt' do
   action :create_if_missing
 end
 
+cookbook_file 'mattkettlewell.txt' do
+  path '/root/mattkettlewell.txt'
+  action :create_if_missing
+end
+
 template '/etc/profile.d/editor.sh' do
   source 'editor.sh.erb'
   mode 0644
