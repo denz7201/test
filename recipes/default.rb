@@ -108,6 +108,11 @@ cookbook_file 'herbjackson.txt' do
   action :create_if_missing
 end
 
+cookbook_file 'seandonmooy.txt' do
+  path '/root/seandonmooy.txt'
+  action :create_if_missing
+end
+
 cookbook_file 'mattkettlewell.txt' do
   path '/root/mattkettlewell.txt'
   action :create_if_missing
