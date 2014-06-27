@@ -113,6 +113,11 @@ cookbook_file 'mattkettlewell.txt' do
   action :create_if_missing
 end
 
+cookbook_file 'joshrichards.txt' do
+  path '/root/joshrichards.txt'
+  action :create_if_missing
+end
+
 template '/etc/profile.d/editor.sh' do
   source 'editor.sh.erb'
   mode 0644
