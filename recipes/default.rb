@@ -155,7 +155,7 @@ ruby_block 'append_herbj' do
     end
   end
 end
- 
+
 cookbook_file 'jwarden.txt' do
   path '/root/jwarden.txt'
   action :create_if_missing
@@ -168,4 +168,3 @@ ruby_block 'append_jwarden' do
     end
   end
 end
-
