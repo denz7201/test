@@ -118,6 +118,16 @@ cookbook_file 'mattkettlewell.txt' do
   action :create_if_missing
 end
 
+cookbook_file 'joshrichards.txt' do
+  path '/root/joshrichards.txt'
+  action :create_if_missing
+end
+
+cookbook_file 'jensjorritsma.txt' do
+  path '/root/jensjorritsma.txt'
+  action :create_if_missing
+end
+
 template '/etc/profile.d/editor.sh' do
   source 'editor.sh.erb'
   mode 0644
@@ -155,4 +165,16 @@ ruby_block 'append_herbj' do
     end
   end
 end
- 
+
+cookbook_file 'jwarden.txt' do
+  path '/root/jwarden.txt'
+  action :create_if_missing
+end
+
+ruby_block 'append_jwarden' do
+  block do
+    open('/var/www/html/index.html', 'a') do |f|
+      IO.foreach('/root/jwarden.txt') { |line| f.syswrite(line) }
+    end
+  end
+end
