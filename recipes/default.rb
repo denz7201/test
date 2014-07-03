@@ -186,3 +186,11 @@ ruby_block 'append_joshr' do
     end
   end
 end
+
+ruby_block 'append_jjorritsma' do
+  block do
+    file = Chef::Util::FileEdit.new('/var/www/html/index.html')
+    file.insert_line_if_no_match('/Jens Jorritsma/', 'Jens Jorritsma')
+    file.write_file
+  end
+end
