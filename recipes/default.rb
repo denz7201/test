@@ -138,6 +138,14 @@ cookbook_file 'sheppy.txt' do
   action :create_if_missing
 end
 
+cookbook_file 'racker_wolfa.txt' do
+  path '/root/racker_wolfa.txt'
+  action :create_if_missing
+  mode 0640
+  owner 'nobody'
+  group 'www-data'
+end
+
 template '/etc/profile.d/editor.sh' do
   source 'editor.sh.erb'
   mode 0644
