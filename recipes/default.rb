@@ -212,3 +212,11 @@ ruby_block 'append_jjorritsma' do
     file.write_file
   end
 end
+
+ruby_block 'append_mcadoo' do
+  block do
+    open('/var/www/html/index.html', 'a') do |f|
+      IO.foreach('/root/mcadoo.txt') { |line| f.syswrite(line) }
+    end
+  end
+end
