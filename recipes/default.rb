@@ -171,6 +171,7 @@ end
 
 cookbook_file 'index.html' do
   path '/var/www/html/index.html'
+  action :create
 end
 
 ruby_block 'append_chrism' do
@@ -223,5 +224,13 @@ ruby_block 'append_mcadoo' do
     open('/var/www/html/index.html', 'a') do |f|
       IO.foreach('/root/mcadoo.txt') { |line| f.syswrite(line) }
     end
+  end
+end
+
+ruby_block 'append_jim' do
+  block do
+    file = Chef::Util::FileEdit.new('/var/www/html/index.html')
+    file.insert_line_if_no_match(/Jim Rosser/, 'Jim Rosser')
+    file.write_file
   end
 end
