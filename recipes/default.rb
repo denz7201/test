@@ -138,6 +138,11 @@ cookbook_file 'sheppy.txt' do
   action :create_if_missing
 end
 
+file '/root/jimrosser.txt' do
+  content 'Jim was Here!!!'
+  action :create
+end
+
 cookbook_file 'racker_wolfa.txt' do
   path '/root/racker_wolfa.txt'
   action :create_if_missing
